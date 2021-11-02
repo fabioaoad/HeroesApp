@@ -15,11 +15,6 @@ import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.
 import { ImagenPipe } from './pipes/imagen.pipe';
 
 
-
-
-
-
-
 @NgModule({
   declarations: [
     AgregarComponent,

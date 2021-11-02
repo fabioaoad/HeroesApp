@@ -1,26 +1,26 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 
-import { Routes, RouterModule } from '@angular/router';
+import {Routes, RouterModule} from '@angular/router';
 
-import { ErrorPageComponent } from './shared/error-page/error-page.component';
-import { HeroesModule } from './heroes/heroes.module';
+import {ErrorPageComponent} from './shared/error-page/error-page.component';
+import {HeroesModule} from './heroes/heroes.module';
 
 
-const routes : Routes = [
+const routes: Routes = [
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: 'heroes',
-    loadChildren: () => import('./heroes/heroes.module').then( m => m.HeroesModule )
+    loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule)
   },
   {
     path: '404',
     component: ErrorPageComponent
   },
   {
-    path:'**',
+    path: '**',
     //component: ErrorPageComponent
     redirectTo: '404'
   }
@@ -28,10 +28,11 @@ const routes : Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot( routes )
+    RouterModule.forRoot(routes)
   ],
   exports: [
     RouterModule
   ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

@@ -13,7 +13,7 @@ import { HeroesService } from '../../services/heroes.service';
   styles: [
     `
     img{
-      width: 100%;
+      width: 70%;
       border-radius: 5px;
     }
     `

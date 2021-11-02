@@ -9,8 +9,18 @@
         <h3>Buscador</h3>
         <mat-form-field>
             <mat-label>Buscar Héroe</mat-label>
-            <input type="text" placeholder="Ingrese su termino de busqueda" aria-label="Number" matInput [(ngModel)]="termino" [matAutocomplete]="auto" (input)="buscando()">
-            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="opcionSeleccionada( $event )">
+            <input type="text"
+                   placeholder="Ingrese su termino de busqueda"
+                   aria-label="Number"
+                   matInput
+                   [(ngModel)]="termino"
+                   [matAutocomplete]="auto"
+                   (input)="buscando()">
+
+          <mat-autocomplete autoActiveFirstOption
+                            #auto="matAutocomplete"
+                            (optionSelected)="opcionSeleccionada( $event )">
+
                 <mat-option *ngFor="let heroe of heroes" [value]="heroe">
                     {{ heroe.superhero }}
                 </mat-option>

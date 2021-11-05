@@ -16,13 +16,13 @@ import { Heroe } from '../../interfaces/heroes.interface';
 })
 export class HeroeTarjetaComponent {
 
-  
-  
+
+
   // El ! sirve para decirle a Angular que
   //confie ya que siempre tendra un heroe
   @Input() heroe!: Heroe;
 
 
- 
+
 
 }
